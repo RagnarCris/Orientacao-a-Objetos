@@ -5,7 +5,6 @@
  */
 package batalhanaval;
 import java.util.*;
-
 /**
  *
  * @author Cristiano
