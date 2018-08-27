@@ -27,9 +27,9 @@ public class Aula2708 {
         pet.venda(cao4);
         pet.venda(cao2);
         
-        quantidade = Cachorro.quantCachorrosComprados();
+        quantidade = PetShop.quantCachorros();
         
-        System.out.println("Quantidade de cachorros: " + quantidade);
+        System.out.println("Quantidade de cachorros restantes: " + quantidade);
         
         
     }

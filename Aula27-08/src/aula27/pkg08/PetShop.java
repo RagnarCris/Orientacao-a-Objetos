@@ -10,7 +10,7 @@ package aula27.pkg08;
  * @author Cristiano
  */
 public class PetShop {
-    
+private static int quantidade=0;    
     public PetShop()
     {
         
@@ -19,6 +19,7 @@ public class PetShop {
     public Cachorro compra(String nome, String cor, int idade)
     {
         Cachorro dog = new Cachorro(nome, cor, idade);
+        quantidade++;
         System.out.println(dog.nome + " comprado(a)");
         return dog;
     }
@@ -26,6 +27,11 @@ public class PetShop {
     public void venda(Cachorro dog)
     {
         System.out.println(dog.nome + " vendido(a)");
+        quantidade--;
         dog = null;
+    }
+    public static int quantCachorros()
+    {
+        return quantidade;
     }    
 }

@@ -13,14 +13,12 @@ public class Cachorro {
     
     protected String nome, cor;
     protected int idade;
-    private static int quantidade=0;
     
     public Cachorro(String nome, String cor, int idade)
     {
         this.nome = nome;
         this.cor = cor;
         this.idade = idade;
-        quantidade++;
     }
 
     public int getIdade() {
@@ -29,11 +27,6 @@ public class Cachorro {
 
     public void setIdade(int idade) {
         this.idade = idade;
-    }
-    
-    public static int quantCachorrosComprados()
-    {
-        return quantidade;
     }
     
 }
