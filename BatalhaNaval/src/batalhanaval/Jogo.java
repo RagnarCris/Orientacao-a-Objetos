@@ -44,7 +44,11 @@ public class Jogo {
 //    {
 //        return jogador2.verificaPalpite();
 //    }
-//    
+    
+    
+    /**
+    * Este metodo roda o Jogo
+    */
     protected void battleShip()
     {
 //        criaTabuleiro();

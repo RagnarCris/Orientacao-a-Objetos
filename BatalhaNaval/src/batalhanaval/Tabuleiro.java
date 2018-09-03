@@ -19,6 +19,15 @@ public class Tabuleiro {
         Scanner s = new Scanner(System.in);
         System.out.println("Digite o lugar que seu barco ficara: ");
         lugar = s.nextInt();
+        System.out.println("**************");
+        System.out.println("**************");
+        System.out.println("**************");
+        System.out.println("**************");
+        System.out.println("**************");
+        System.out.println("**************");
+        System.out.println("**************");
+        System.out.println("**************");
+        System.out.println("**************");
 //        Random generator = new Random();
 //        int rand;
 //        rand = generator.nextInt(17);
