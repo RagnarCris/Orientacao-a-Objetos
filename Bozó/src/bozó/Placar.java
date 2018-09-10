@@ -15,7 +15,15 @@ public class Placar {
     
     public Placar()
     {
-        
+        for(int i = 0; i < 10; i++)
+        {
+            pontuacao[i] = 0;
+        }
+    }
+    
+    void setPontuacao(int i, int valor)
+    {
+        pontuacao[i] = valor;
     }
     
     void exibePosicao()

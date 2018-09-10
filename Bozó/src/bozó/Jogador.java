@@ -52,10 +52,11 @@ public class Jogador {
     {
         Scanner s = new Scanner(System.in);
         String escolha;
+        lancaDado();
         System.out.println("As faces do seus dados sao respectivamente: ");
         for(int i = 0; i < 5; i++)
         {
-            System.out.println(i + "º: " + dados.get(i));
+            System.out.println(i + "º: " + dados.get(i).getFace());
         }
         System.out.println("Deseja jogar novamente? (S para sim e N para nao)");
         escolha = s.nextLine();
@@ -67,12 +68,71 @@ public class Jogador {
             str = dado.split(",");
             lancaDado(str);
         }
-        
+        System.out.println("Deseja jogar novamente? (S para sim e N para nao)");
+        escolha = s.nextLine();
+        if(escolha == "S")
+        {
+            System.out.println("Escolha quais dados pretende lancar na proxima rodada: (separados por virgula)");
+            String dado = s.nextLine();
+            String []str1 = new String[5];
+            str1 = dado.split(",");
+            lancaDado(str1);
+        }
     }
     
-    public void escolhePosicao()
+    public void escolhePontuacao()
     {
+        int cont = 0, contS = 0, valor = 0;
+        int []contFu = new int[6];
+        for(int k = 0; k < 6; k++)
+            contFu[k] = 0;
         
+        for(int i = 0; i < 6; i++)
+        {
+            if(i < 5)
+            {
+                if(dados.get(i+1).face == dados.get(i).face)
+                    cont++;
+                if(dados.get(i+1).face == dados.get(i).face+1)
+                    contS++;
+                if(cont == 4)
+                    placar.setPontuacao(0, 50);
+                if(contS == 4)
+                    placar.setPontuacao(8, 30);
+                if(cont == 3)
+                    placar.setPontuacao(9, 40);
+                for(int j = 0; j < 5; j++)
+                {
+                    if(dados.get(i).face == dados.get(j).face)
+                    {
+                        contFu[i+1]++; 
+                    }
+                }
+            }
+            for(int j = 0; j < 5; j++)
+            {
+                if(dados.get(j).face == i+1)
+                {
+                    valor++;
+                    if((i+1) == 2)
+                        placar.setPontuacao(i+1, 2*valor);
+                    if((i+1) == 3)
+                        placar.setPontuacao(i+1, 3*valor);
+                    if((i+1) == 4)
+                        placar.setPontuacao(i+1, 4*valor);
+                    if((i+1) == 5)
+                        placar.setPontuacao(i+1, 5*valor);
+                    if((i+1) == 6)
+                        placar.setPontuacao(i+1, 6*valor);
+                    else
+                        placar.setPontuacao(i+1, 6*valor);
+                    
+                }
+            }
+            
+            valor = 0;
+            
+        }
     }
 
     public List<Dado> getDados() {
@@ -85,10 +145,6 @@ public class Jogador {
 
     public int getPontuacao() {
         return pontuacao;
-    }
-
-    public void setPontuacao(int pontuacao) {
-        this.pontuacao = pontuacao;
     }
 
     
