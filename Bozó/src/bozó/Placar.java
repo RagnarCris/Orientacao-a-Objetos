@@ -11,6 +11,7 @@ package bozó;
  */
 public class Placar {
     
+    private int maior;
     private int []pontuacao = new int[10];
     
     public Placar()
@@ -28,11 +29,24 @@ public class Placar {
     
     void exibePosicao()
     {
-        
+        maior = pontuacao[0];
+        for(int i = 1; i < 10; i++)
+        {
+            if(pontuacao[i] > maior)
+                maior = pontuacao[i];     
+        }
+        System.out.println("Pontuacao: " + maior);
     }
-    void exibePlacar()
+    int retornaPosicao()
     {
-        
+        maior = pontuacao[0];
+        for(int i = 1; i < 10; i++)
+        {
+            if(pontuacao[i] > maior)
+                maior = pontuacao[i];
+            
+        }
+        return maior;
     }
     
 }

@@ -82,7 +82,7 @@ public class Jogador {
     
     public void escolhePontuacao()
     {
-        int cont = 0, contS = 0, valor = 0;
+        int cont = 0, contS = 0, valor = 0, contFu2 = 0, contFu3 = 0;
         int []contFu = new int[6];
         for(int k = 0; k < 6; k++)
             contFu[k] = 0;
@@ -133,6 +133,15 @@ public class Jogador {
             valor = 0;
             
         }
+        for(int k = 0; k<6; k++)
+        {
+            if(contFu[k+1] == 2)
+                contFu2++;
+            else if(contFu[k+1] == 3)
+                contFu3++;
+        }
+        if(contFu2 == 1 && contFu3 == 1)
+            placar.setPontuacao(7, 20);
     }
 
     public List<Dado> getDados() {
