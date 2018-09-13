@@ -26,4 +26,9 @@ public class Jogo {
             System.out.println("Numero de jogadores insuficientes ou maior que o limite");
         }
     }
+    
+    public void rodaJogo()
+    {
+        
+    }
 }
