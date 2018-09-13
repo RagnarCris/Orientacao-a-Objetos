@@ -11,11 +11,14 @@ import java.util.*;
  */
 public class Jogador {
     protected List <Dado> dados = new ArrayList();
-    protected int pontuacao;
+    private int pontuacao;
     protected String nome;
     protected Placar placar;
 
     public Jogador() {
+        Scanner s = new Scanner(System.in);
+        System.out.println("Digite seu nome: ");
+        nome = s.nextLine();
         for(int i = 0; i < 5; i++)
         {
             dados.add(i, new Dado(6));
@@ -142,6 +145,8 @@ public class Jogador {
         }
         if(contFu2 == 1 && contFu3 == 1)
             placar.setPontuacao(7, 20);
+        
+        pontuacao = placar.retornaPosicao();
     }
 
     public List<Dado> getDados() {
