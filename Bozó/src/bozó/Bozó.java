@@ -15,7 +15,8 @@ public class Bozó {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
+        Jogo bozo = new Jogo(2);
+        bozo.rodaJogo();
     }
     
 }

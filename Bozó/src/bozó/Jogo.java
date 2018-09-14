@@ -34,7 +34,6 @@ public class Jogo {
         for(int i = 0; i < jogadores.size(); i++)
         {
             jogadores.get(i).escolheDado();
-            jogadores.get(i).escolhePontuacao();
         }
         maior = jogadores.get(0).getPontuacao();
         auxiliar = jogadores.get(0);

@@ -56,31 +56,41 @@ public class Jogador {
         Scanner s = new Scanner(System.in);
         String escolha;
         lancaDado();
-        System.out.println("As faces do seus dados sao respectivamente: ");
+        System.out.println(nome + ", as faces do seus dados sao respectivamente: ");
         for(int i = 0; i < 5; i++)
         {
-            System.out.println(i + "º: " + dados.get(i).getFace());
+            System.out.println((i+1) + "º: " + dados.get(i).getFace());
         }
         System.out.println("Deseja jogar novamente? (S para sim e N para nao)");
-        escolha = s.nextLine();
-        if(escolha == "S")
+        if("S".equals(s.nextLine()))
         {
             System.out.println("Escolha quais dados pretende lancar na proxima rodada: (separados por virgula)");
             String dado = s.nextLine();
-            String []str = new String[5];
+            String []str;
             str = dado.split(",");
             lancaDado(str);
+            System.out.println(nome + ", as novas faces do seus dados sao respectivamente: ");
+            for(int i = 0; i < str.length; i++)
+            {
+                System.out.println((i+1) + "º: " + dados.get(i).getFace());
+            }
         }
         System.out.println("Deseja jogar novamente? (S para sim e N para nao)");
         escolha = s.nextLine();
-        if(escolha == "S")
+        if("S".equals(s.nextLine()))
         {
             System.out.println("Escolha quais dados pretende lancar na proxima rodada: (separados por virgula)");
             String dado = s.nextLine();
-            String []str1 = new String[5];
+            String []str1;
             str1 = dado.split(",");
             lancaDado(str1);
+            System.out.println(nome + ", as novas faces do seus dados sao respectivamente: ");
+            for(int i = 0; i < str1.length; i++)
+            {
+                System.out.println((i+1) + "º: " + dados.get(i).getFace());
+            }
         }
+        escolhePontuacao();
     }
     
     public void escolhePontuacao()
