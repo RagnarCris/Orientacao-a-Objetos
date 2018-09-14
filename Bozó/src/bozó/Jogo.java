@@ -11,9 +11,10 @@ import java.util.*;
  */
 public class Jogo {
     protected List <Jogador> jogadores = new ArrayList();
-    
+    private int quantidade;
     public Jogo(int qtd)
     {
+        quantidade = qtd;
         if(qtd<=6 && qtd>0)
         {
             for(int i = 0; i < qtd; i++)
@@ -34,6 +35,8 @@ public class Jogo {
         for(int i = 0; i < jogadores.size(); i++)
         {
             jogadores.get(i).escolheDado();
+            System.out.println("OLa");
+            jogadores.get(i).escolhePontuacao();
         }
         maior = jogadores.get(0).getPontuacao();
         auxiliar = jogadores.get(0);

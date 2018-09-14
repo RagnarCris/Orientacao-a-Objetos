@@ -13,7 +13,7 @@ public class Jogador {
     protected List <Dado> dados = new ArrayList();
     private int pontuacao;
     protected String nome;
-    protected Placar placar;
+    protected Placar placar = new Placar();
 
     public Jogador() {
         Scanner s = new Scanner(System.in);
@@ -54,7 +54,6 @@ public class Jogador {
     public void escolheDado()
     {
         Scanner s = new Scanner(System.in);
-        String escolha;
         lancaDado();
         System.out.println(nome + ", as faces do seus dados sao respectivamente: ");
         for(int i = 0; i < 5; i++)
@@ -76,7 +75,6 @@ public class Jogador {
             }
         }
         System.out.println("Deseja jogar novamente? (S para sim e N para nao)");
-        escolha = s.nextLine();
         if("S".equals(s.nextLine()))
         {
             System.out.println("Escolha quais dados pretende lancar na proxima rodada: (separados por virgula)");
@@ -90,7 +88,6 @@ public class Jogador {
                 System.out.println((i+1) + "º: " + dados.get(i).getFace());
             }
         }
-        escolhePontuacao();
     }
     
     public void escolhePontuacao()

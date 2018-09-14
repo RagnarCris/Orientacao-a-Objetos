@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package bozó;
+import java.util.*;
 /**
  *
  * @author Cristiano
@@ -15,7 +16,9 @@ public class Bozó {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Jogo bozo = new Jogo(2);
+        Scanner s = new Scanner(System.in);
+        System.out.println("Quantos jogadores?");
+        Jogo bozo = new Jogo(s.nextInt());
         bozo.rodaJogo();
     }
     
