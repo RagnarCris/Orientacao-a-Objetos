@@ -99,7 +99,7 @@ public class Jogador {
         
         for(int i = 0; i < 6; i++)
         {
-            if(i < 5)
+            if(i < 4)
             {
                 if(dados.get(i+1).face == dados.get(i).face)
                     cont++;
@@ -143,7 +143,7 @@ public class Jogador {
             valor = 0;
             
         }
-        for(int k = 0; k<6; k++)
+        for(int k = 0; k<5; k++)
         {
             if(contFu[k+1] == 2)
                 contFu2++;
