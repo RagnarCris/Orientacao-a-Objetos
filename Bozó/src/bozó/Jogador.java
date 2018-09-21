@@ -68,7 +68,7 @@ public class Jogador {
             String []str;
             str = dado.split(",");
             lancaDado(str);
-            System.out.println(nome + ", as novas faces do seus dados sao respectivamente: ");
+            System.out.println(nome + ", as novas faces do seus dados sao respectivamente: (os numeros absolutos dos dados foram apresentados previamente)");
             for(int i = 0; i < str.length; i++)
             {
                 System.out.println((i+1) + "º: " + dados.get(i).getFace());
@@ -82,7 +82,7 @@ public class Jogador {
             String []str1;
             str1 = dado.split(",");
             lancaDado(str1);
-            System.out.println(nome + ", as novas faces do seus dados sao respectivamente: ");
+            System.out.println(nome + ", as novas faces do seus dados sao respectivamente: (os numeros absolutos dos dados foram apresentados previamente)");
             for(int i = 0; i < str1.length; i++)
             {
                 System.out.println((i+1) + "º: " + dados.get(i).getFace());
