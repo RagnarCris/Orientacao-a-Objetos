@@ -9,19 +9,19 @@ package aula.pkg14.pkg09;
  *
  * @author Cristiano
  */
-public class Animal {
+public abstract class Animal {
     protected int idade;
     protected String raca, nome;
     
-    public Animal()
-    {
-    }
-    public Animal(String nome, String raca, int idade)
-    {
-        this.nome = nome;
-        this.raca = raca;
-        this.idade = idade;
-    }
+//    public Animal()
+//    {
+//    }
+//    public Animal(String nome, String raca, int idade)
+//    {
+//        this.nome = nome;
+//        this.raca = raca;
+//        this.idade = idade;
+//    }
 
     public int getIdade() {
         return idade;
@@ -55,8 +55,5 @@ public class Animal {
     {
         System.out.println("Dormindo");
     }
-    public void emitirSom()
-    {
-        System.out.println("Emitindo som");
-    }
+    public abstract void emitirSom();
 }

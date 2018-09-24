@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package aula.pkg14.pkg09;
-
+import java.util.*;
 /**
  *
  * @author Cristiano
@@ -16,11 +16,15 @@ public class Aula1409 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Animal animal = new Animal();
-        Cachorro cao = new Cachorro();
-        cao.comer();
-        cao.dormir();
-        cao.emitirSom();
+        ArrayList<Animal> animais = new ArrayList();
+        animais.add(new Cachorro());
+        animais.add(new Gato());
+        animais.add(new Tiranossauro());
+        for(int i = 0; i < animais.size(); i++)
+        {
+            animais.get(i).emitirSom();
+        }
+        
     }
     
 }

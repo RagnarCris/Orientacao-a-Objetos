@@ -9,7 +9,8 @@ package aula.pkg14.pkg09;
  *
  * @author Cristiano
  */
-public class Cachorro extends Canino{
+
+public class Cachorro extends Animal{
     
     public Cachorro()
     {
@@ -19,7 +20,6 @@ public class Cachorro extends Canino{
     @Override
     public void emitirSom()
     {
-        super.emitirSom();
         System.out.println("Au Auuu");
     }
 }

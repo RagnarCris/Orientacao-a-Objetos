@@ -9,7 +9,7 @@ package aula.pkg14.pkg09;
  *
  * @author Cristiano
  */
-public class Gato extends Felino{
+public class Gato extends Animal{
     
     public Gato()
     {

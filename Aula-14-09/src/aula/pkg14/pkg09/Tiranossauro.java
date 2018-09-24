@@ -15,9 +15,7 @@ public class Tiranossauro extends Animal{
     {
         
     }
-    public Tiranossauro(String nome, String raca, int idade) {
-        super(nome, raca, idade);
-    }
+    
     @Override
     public void emitirSom()
     {
